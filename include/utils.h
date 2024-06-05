@@ -15,6 +15,18 @@ typedef struct
     colorTeam_t team;
 }cartesian_position_t;
 
+
+typedef enum {
+    CERCLE,
+    RECTANGLE
+}   forme_type_t;
+
+typedef enum {
+    DROIT,
+    ARRIERE,
+    ROTATION
+} type_deplacement_t;
+
 inline unsigned long millis() {
     struct timespec ts;
     clock_gettime(CLOCK_MONOTONIC, &ts); // Utilisation de CLOCK_MONOTONIC pour éviter les changements d'horloge

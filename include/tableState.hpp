@@ -1,6 +1,4 @@
 #pragma once
-
-
 #include "config.h"
 
 
@@ -17,7 +15,7 @@ public:
     bool solarPanelTurn = false;
     unsigned long startTime;
 
-    robot_t robot;
+    robot_t robot,adversaire;
 
     // //Poistion
     // const cartesian_position_t plantPosition[6] =

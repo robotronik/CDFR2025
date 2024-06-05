@@ -35,6 +35,14 @@
 #define ROBOT_X_OFFSET 155
 #define ROBOT_Y_OFFSET 60
 
+
+#define LARGEUR_ROBOT 400 
+#define SECURITE 100
+#define NOMBRE_TEST_Angle 12     //12 angles 
+#define NOMBRE_TEST_DROIT 4
+#define DIM_ZONE 200
+#define RISQUE 1
+
 const cartesian_position_t plantPosition[6] =
 {{500,0},{300,-500},{-300,-500},{-500,0},{-300,500},{300,500}};
 const cartesian_position_t JardinierePosition[6] =

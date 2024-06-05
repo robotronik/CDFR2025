@@ -20,13 +20,29 @@ typedef struct
     bool   onTable;
 }lidarAnalize_t;
 
+typedef struct instruction
+{
+    position_t pos;
+    int cout;
+    type_deplacement_t type;
+    struct instruction* parent;
+} instruction_t;
+
+
+typedef struct
+{
+    int centre_x,centre_y;
+    int demie_longueur,demie_largeur;
+    int teta;
+    forme_type_t forme;
+}obstacle_t;
 typedef struct
 {
     colorTeam_t colorTeam;// équipe du robot
     position_t pos; //position du robot
     double vit_x,vit_y; //vitesse instantannée du robot
     int collide;
-    //obstacle_t obstacle;
+    obstacle_t obstacle;
 
     bool robotHavePlante;// le robot a des plantes
     
