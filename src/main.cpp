@@ -40,10 +40,7 @@ void ctrlc(int)
 {
     ctrl_c_pressed = true;
 }
-bool ctrl_z_pressed = false;
-void ctrlz(int signal) {
-    ctrl_z_pressed = true;
-}
+
 
 
 bool isWifiConnected() {
@@ -163,17 +160,11 @@ int main(int argc, char *argv[]) {
                     if( distance < 250) {ennemieInAction(&tableStatus, &pos_ennemie);}
                 }
                 
-                
-               
                 if (count_pos == 10){
                     affichage->updatePosition(pos_ennemie.x,pos_ennemie.y);
                     count_pos = 0;
                 }
-                count_pos ++;
-                if(ctrl_z_pressed){
-                    ctrl_z_pressed = false;
-                    pixelArtPrint(lidarData,count,50,50,100,position);
-                }                
+                count_pos ++;              
                 robotI2C->getBrakingDistance(distance);
                 tableStatus.robot.collide = collide(lidarData,count,distance);
             }

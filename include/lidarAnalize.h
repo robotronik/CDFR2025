@@ -26,22 +26,13 @@ bool collideBackward(lidarAnalize_t* data, int count);
 
 int collide(lidarAnalize_t* data, int count ,int distanceStop);
 
-void printLidarAxial(lidarAnalize_t* data, int count);
-
-void printAngular(lidarAnalize_t* data, int count);
-
-void pixelArtPrint(lidarAnalize_t* data, int count,int sizeX,int sizeY,int scale,position_t position);
-
 double distance_2_pts(double d1,double deg1, double d2, double deg2);
 
 void supprimerElement(element_decord**& array, int& rows, int index);
 
 double angle(position_float_t A, position_float_t B, position_float_t C);
 int in_table(position_float_t M);
-position_float_t sol_eq_2cercle(position_float_t A, double RA, position_float_t B, double RB);
-
-position_float_t position_estime(double angle12, double angle23, double angle31,double angle_poto2, int d12, int d23,int d31);
-position_float_t position_estime2(double alpha12, double alpha23, double alpha31);
+position_float_t position_estime(double alpha12, double alpha23, double alpha31);
 void init_position_balise(lidarAnalize_t* data, int count, position_t *position);
 
 

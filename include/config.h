@@ -13,9 +13,9 @@ typedef struct
 
 
 typedef struct {
-    float x;
-    float y;
-    float angle;
+    double x;
+    double y;
+    double angle;
 } position_float_t;
 
 typedef struct 
